@@ -3,6 +3,7 @@ build:
   services:
     - docker:24-dind
   script:
+    - echo "$CI_REGISTRY_PASSWORD" | docker login $CI_REGISTRY -u $CI_REGISTRY_USER --password-stdin
     - cd matchbox
     - docker buildx create --use
     - docker buildx inspect --bootstrap
