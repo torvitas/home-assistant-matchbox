@@ -6,7 +6,7 @@ url: https://gitlab.com/home-assistant-addons/home-assistant-matchbox
 arch:
   - aarch64
   - amd64
-image: gitlab.com/home-assistant-addons/home-assistant-matchbox
+image: registry.gitlab.com/home-assistant-addons/home-assistant-matchbox
 map:
   - type: data
     path: /var/lib/matchbox
