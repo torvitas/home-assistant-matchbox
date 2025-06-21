@@ -1,0 +1,26 @@
+name: Matchbox
+version: v0.11.0
+slug: matchbox
+description: Matchbox is a service that matches bare-metal machines to profiles that PXE boot and provision clusters.
+url: https://gitlab.com/home-assistant-addons/home-assistant-matchbox
+arch:
+  - aarch64
+  - amd64
+image: gitlab.com/home-assistant-addons/home-assistant-matchbox
+map:
+  - type: data
+    path: /var/lib/matchbox
+    read_only: false
+  - type: media
+    path: /var/lib/matchbox/assets
+    read_only: false
+  - type: addon_config
+    path: /etc/matchbox
+    read_only: false
+ports:
+  8080/tcp: 8080
+#  8081/tcp: 8081
+environment:
+  MATCHBOX_ADDRESS: 0.0.0.0:8080
+#  MATCHBOX_RPC_ADDRESS: 0.0.0.0:8081
+  MATCHBOX_LOG_LEVEL: debug

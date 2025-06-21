@@ -1,0 +1,5 @@
+{
+  "name": "Matchbox is a service that matches bare-metal machines to profiles that PXE boot and provision clusters.",
+  "url": "https://gitlab.com/itsdonewhenitsdone/home-assistant-matchbox",
+  "maintainer": "Sascha Marcel Schmidt <mail@saschaschmidt.net>"
+}
