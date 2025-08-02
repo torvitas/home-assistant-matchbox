@@ -25,9 +25,9 @@ environment:
   MATCHBOX_RPC_ADDRESS: 0.0.0.0:8081
   MATCHBOX_LOG_LEVEL: debug
 schema:
-  ca.crt: str
-  client.crt: str
-  client.key: str
-  server.crt: str
-  server.key: str
-  domain: str
+  ca.crt: str?
+  client.crt: str?
+  client.key: str?
+  server.crt: str?
+  server.key: str?
+  domain: str?
