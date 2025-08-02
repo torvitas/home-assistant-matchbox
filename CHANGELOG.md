@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.8](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.3.7...v1.3.8) (2025-08-02)
+
+### Bug Fixes
+
+* Fix typo ([fec9f84](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/commit/fec9f84af9f51cdadf0d6c783367aa1909ce0d91))
+
 ## [1.3.7](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.3.6...v1.3.7) (2025-08-02)
 
 ### Bug Fixes
