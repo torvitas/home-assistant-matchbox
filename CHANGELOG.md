@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.3](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.3.2...v1.3.3) (2025-08-02)
+
+### Bug Fixes
+
+* Do not override the entrypoint ([877d583](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/commit/877d583168857d6c496a877ff1fbc6b6b36f8515))
+
 ## [1.3.2](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.3.1...v1.3.2) (2025-08-02)
 
 ### Bug Fixes
