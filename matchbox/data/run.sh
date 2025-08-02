@@ -22,11 +22,14 @@ if [[ "$CA_CRT" != "null" && "$CLIENT_CRT" != "null" && "$CLIENT_KEY" != "null" 
     chmod 600 /etc/matchbox/*.key
 elif [[ ! -f "ca.crt" || ! -f "client.crt" || ! -f "client.key" || ! -f "server.crt" || ! -f "server.key" ]] && [[ -n "$FQDN" ]]; then
     if [[ -n "$FQDN" ]]; then
-        SAN="DNS.1:${FQDN}"
-        ./scripts/cert-gen
+        cd /scripts/tls
+        export SAN="DNS.1:${FQDN}"
+        ./cert-gen
+        cp ca.crt client.crt server.crt server.key /etc/matchbox/
         bashio::log.green "ca.crt: \n $(<ca.crt)"
         bashio::log.green "client.crt: \n $(<client.crt)"
         bashio::log.green "client.key: \n $(<client.key)"
+        cd /etc/matchbox
     else
         bashio::log.fatal "Configuration invalid, either specify fqdn or a full set of certificates..."
     fi
