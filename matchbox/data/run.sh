@@ -11,7 +11,7 @@ SERVER_CRT=$(bashio::config "server.crt")
 SERVER_KEY=$(bashio::config "server.key")
 
 cd /etc/matchbox
-if [[ -n "$CA_CRT" && -n "$CLIENT_CRT" && -n "$CLIENT_KEY" && -n "$SERVER_CRT" && -n "$SERVER_KEY" ]]; then
+if [[ "$CA_CRT" != "null" && "$CLIENT_CRT" != "null" && "$CLIENT_KEY" != "null" && "$SERVER_CRT" != "null" && "$SERVER_KEY" != "null" ]]; then
     echo "${CA_CRT}" > ca.crt
     echo "${CLIENT_CRT}" > client.crt
     echo "${CLIENT_KEY}" > client.key
