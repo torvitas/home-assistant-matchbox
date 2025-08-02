@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.6](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.3.5...v1.3.6) (2025-08-02)
+
+### Bug Fixes
+
+* Check if options are "null" instead of empty or unset ([b6e7922](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/commit/b6e792281828cd03fd5e54ac7d8f253cc40ba9fa))
+
 ## [1.3.5](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.3.4...v1.3.5) (2025-08-02)
 
 ### Bug Fixes
