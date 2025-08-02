@@ -25,7 +25,7 @@ elif [[ ! -s "ca.crt" || ! -s "client.crt" || ! -s "client.key" || ! -s "server.
         cd /scripts/tls
         export SAN="DNS.1:${FQDN}"
         ./cert-gen
-        cp ca.crt client.crt server.crt server.key /etc/matchbox/
+        cp ca.crt client.crt client.key server.crt server.key /etc/matchbox/
         bashio::log.green "ca.crt: \n $(<ca.crt)"
         bashio::log.green "client.crt: \n $(<client.crt)"
         bashio::log.green "client.key: \n $(<client.key)"
