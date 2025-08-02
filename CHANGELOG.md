@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.11](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.3.10...v1.3.11) (2025-08-02)
+
+### Bug Fixes
+
+* Properly validate existence of certs and configuration option ([3b81603](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/commit/3b8160359e0c01ee1554597afbe41a8c367097af))
+
 ## [1.3.10](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.3.9...v1.3.10) (2025-08-02)
 
 ### Bug Fixes
