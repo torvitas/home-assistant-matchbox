@@ -8,5 +8,6 @@ COPY --from=scripts /src/scripts /scripts
 COPY --from=matchbox /matchbox /matchbox
 COPY /data /
 RUN chmod +x /run.sh
+RUN apk --no-cache add openssl
 EXPOSE 8080
 CMD ["/run.sh"]
