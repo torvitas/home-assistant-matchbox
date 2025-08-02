@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.1](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.3.0...v1.3.1) (2025-08-02)
+
+### Bug Fixes
+
+* Make all configuration options optional ([14ca859](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/commit/14ca859a832e5a73c39f9e6a88cf40dd9e18fda0))
+
 ## [1.3.0](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.2.0...v1.3.0) (2025-08-02)
 
 ### Features
