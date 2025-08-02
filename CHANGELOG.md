@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.10](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.3.9...v1.3.10) (2025-08-02)
+
+### Bug Fixes
+
+* Add openssl to image ([3e5653c](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/commit/3e5653c4413e988be575f588f529b2cbae5de587))
+
 ## [1.3.9](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.3.8...v1.3.9) (2025-08-02)
 
 ### Bug Fixes
