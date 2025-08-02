@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.2](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.3.1...v1.3.2) (2025-08-02)
+
+### Bug Fixes
+
+* Run entrypoint with bashio ([afbae9e](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/commit/afbae9e7de0db504fc5bacda80efac429f9b68d7))
+
 ## [1.3.1](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.3.0...v1.3.1) (2025-08-02)
 
 ### Bug Fixes
