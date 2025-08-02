@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.7](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.3.6...v1.3.7) (2025-08-02)
+
+### Bug Fixes
+
+* Actually use fqdn variable ([dc151f6](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/commit/dc151f6254702ed847775828f642ebe964337bb3))
+
 ## [1.3.6](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.3.5...v1.3.6) (2025-08-02)
 
 ### Bug Fixes
