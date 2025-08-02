@@ -9,6 +9,7 @@ CLIENT_CRT=$(bashio::config "client.crt")
 CLIENT_KEY=$(bashio::config "client.key")
 SERVER_CRT=$(bashio::config "server.crt")
 SERVER_KEY=$(bashio::config "server.key")
+FQDN=$(bashio:config "fqdn")
 
 cd /etc/matchbox
 if [[ "$CA_CRT" != "null" && "$CLIENT_CRT" != "null" && "$CLIENT_KEY" != "null" && "$SERVER_CRT" != "null" && "$SERVER_KEY" != "null" ]]; then

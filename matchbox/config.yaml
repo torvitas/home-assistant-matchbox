@@ -31,4 +31,4 @@ schema:
   client.key: str?
   server.crt: str?
   server.key: str?
-  domain: str?
+  fqdn: str?
