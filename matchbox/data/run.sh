@@ -20,8 +20,8 @@ if [[ "$CA_CRT" != "null" && "$CLIENT_CRT" != "null" && "$CLIENT_KEY" != "null" 
     echo "${SERVER_KEY}" > server.key
     chmod 644 /etc/matchbox/*.crt
     chmod 600 /etc/matchbox/*.key
-elif [[ ! -f "ca.crt" || ! -f "client.crt" || ! -f "client.key" || ! -f "server.crt" || ! -f "server.key" ]] && [[ -n "$FQDN" ]]; then
-    if [[ -n "$FQDN" ]]; then
+elif [[ ! -s "ca.crt" || ! -s "client.crt" || ! -s "client.key" || ! -s "server.crt" || ! -s "server.key" ]]; then
+    if [[ "$FQDN" != "null" ]]; then
         cd /scripts/tls
         export SAN="DNS.1:${FQDN}"
         ./cert-gen
