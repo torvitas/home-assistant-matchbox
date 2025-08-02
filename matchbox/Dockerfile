@@ -9,4 +9,4 @@ COPY --from=matchbox /matchbox /matchbox
 COPY /data /
 RUN chmod +x /run.sh
 EXPOSE 8080
-ENTRYPOINT ["/run.sh"]
+CMD ["/run.sh"]
