@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.0](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.1.0...v1.2.0) (2025-08-02)
+
+### Features
+
+* Use home assistant base image ([311aca0](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/commit/311aca02d0057b20b59490676e6be97974de0537))
+
 ## [1.1.0](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.0.0...v1.1.0) (2025-06-22)
 
 ### Features
