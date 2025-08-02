@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.9](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.3.8...v1.3.9) (2025-08-02)
+
+### Bug Fixes
+
+* Invoke cert-gen script correctly ([6ed87ee](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/commit/6ed87ee76e4db0843e69ab1677e30e6fa197d4c8))
+
 ## [1.3.8](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.3.7...v1.3.8) (2025-08-02)
 
 ### Bug Fixes
