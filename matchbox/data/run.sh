@@ -32,6 +32,7 @@ elif [[ ! -s "ca.crt" || ! -s "client.crt" || ! -s "client.key" || ! -s "server.
         cd /etc/matchbox
     else
         bashio::log.fatal "Configuration invalid, either specify fqdn or a full set of certificates..."
+        exit 1
     fi
 fi
 cd ~
