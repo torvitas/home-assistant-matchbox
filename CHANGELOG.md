@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.12](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.3.11...v1.3.12) (2025-08-02)
+
+### Bug Fixes
+
+* Actually copy all the cert files to their destination ([7580728](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/commit/7580728032c807b230b41028ab41d2cf9986f829))
+* Actually exit on bad configuration ([56cdae2](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/commit/56cdae2aed029660207d23c6de30465ff30a4216))
+
 ## [1.3.11](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.3.10...v1.3.11) (2025-08-02)
 
 ### Bug Fixes
