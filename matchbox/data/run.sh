@@ -1,0 +1,37 @@
+#!/usr/bin/with-contenv bashio
+# shellcheck shell=bash
+set -e
+
+bashio::log.info "Preparing TLS certificates..."
+
+CA_CRT=$(bashio::config "ca.crt")
+CLIENT_CRT=$(bashio::config "client.crt")
+CLIENT_KEY=$(bashio::config "client.key")
+SERVER_CRT=$(bashio::config "server.crt")
+SERVER_KEY=$(bashio::config "server.key")
+
+cd /etc/matchbox
+if [[ -n "$CA_CRT" && -n "$CLIENT_CRT" && -n "$CLIENT_KEY" && -n "$SERVER_CRT" && -n "$SERVER_KEY" ]]; then
+    echo "${CA_CRT}" > ca.crt
+    echo "${CLIENT_CRT}" > client.crt
+    echo "${CLIENT_KEY}" > client.key
+    echo "${SERVER_CRT}" > server.crt
+    echo "${SERVER_KEY}" > server.key
+    chmod 644 /etc/matchbox/*.crt
+    chmod 600 /etc/matchbox/*.key
+elif [[ ! -f "ca.crt" || ! -f "client.crt" || ! -f "client.key" || ! -f "server.crt" || ! -f "server.key" ]] && [[ -n "$FQDN" ]]; then
+    if [[ -n "$FQDN" ]]; then
+        SAN="DNS.1:${FQDN}"
+        ./scripts/cert-gen
+        bashio::log.green "ca.crt: \n $(<ca.crt)"
+        bashio::log.green "client.crt: \n $(<client.crt)"
+        bashio::log.green "client.key: \n $(<client.key)"
+    else
+        bashio::log.fatal "Configuration invalid, either specify fqdn or a full set of certificates..."
+    fi
+fi
+cd ~
+
+bashio::log.info "Starting matchbox..."
+
+exec /matchbox
