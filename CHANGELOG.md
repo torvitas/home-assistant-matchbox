@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.5](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.3.4...v1.3.5) (2025-08-02)
+
+### Bug Fixes
+
+* Disable init system ([176c521](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/commit/176c521644bf99f5083c8167138631ace1335dfb))
+
 ## [1.3.4](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.3.3...v1.3.4) (2025-08-02)
 
 ### Bug Fixes
