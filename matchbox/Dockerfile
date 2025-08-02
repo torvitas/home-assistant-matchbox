@@ -7,5 +7,6 @@ FROM ghcr.io/hassio-addons/base:18.0.3
 COPY --from=scripts /src/scripts /scripts
 COPY --from=matchbox /matchbox /matchbox
 COPY /data /
+RUN chmod +x /run.sh
 EXPOSE 8080
-ENTRYPOINT ["/bin/bash", "/run.sh"]
+ENTRYPOINT ["/run.sh"]
