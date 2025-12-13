@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.5.1](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.5.0...v1.5.1) (2025-12-13)
+
+### Bug Fixes
+
+* Ensure data path ([e57bbb5](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/commit/e57bbb52d4b3a392c2fa0337cfb6698d8669e609))
+
 ## [1.5.0](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.4.3...v1.5.0) (2025-12-13)
 
 ### Features
