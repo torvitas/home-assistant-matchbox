@@ -2,34 +2,41 @@
 # shellcheck shell=bash
 set -e
 
+mkdir -p "${MATCHBOX_DATA_PATH}"
+mkdir -p "${MATCHBOX_ASSETS_PATH}"
+
 bashio::log.info "Preparing TLS certificates..."
 
 CA_CRT=$(bashio::config "ca.crt")
-CLIENT_CRT=$(bashio::config "client.crt")
-CLIENT_KEY=$(bashio::config "client.key")
 SERVER_CRT=$(bashio::config "server.crt")
 SERVER_KEY=$(bashio::config "server.key")
 FQDN=$(bashio::config "fqdn")
 
-cd /etc/matchbox
-if [[ "$CA_CRT" != "null" && "$CLIENT_CRT" != "null" && "$CLIENT_KEY" != "null" && "$SERVER_CRT" != "null" && "$SERVER_KEY" != "null" ]]; then
-  echo "${CA_CRT}" >ca.crt
-  echo "${CLIENT_CRT}" >client.crt
-  echo "${CLIENT_KEY}" >client.key
-  echo "${SERVER_CRT}" >server.crt
-  echo "${SERVER_KEY}" >server.key
-  chmod 644 /etc/matchbox/*.crt
-  chmod 600 /etc/matchbox/*.key
-elif [[ ! -s "ca.crt" || ! -s "client.crt" || ! -s "client.key" || ! -s "server.crt" || ! -s "server.key" ]]; then
+mkdir -p $(dirname ${MATCHBOX_CA_FILE})
+mkdir -p $(dirname ${MATCHBOX_CERT_FILE})
+mkdir -p $(dirname ${MATCHBOX_KEY_FILE})
+if [[ "$CA_CRT" != "null" && "$SERVER_CRT" != "null" && "$SERVER_KEY" != "null" ]]; then
+  echo "${CA_CRT}" >${MATCHBOX_CA_FILE}
+  chmod 644 ${MATCHBOX_CA_FILE}
+  echo "${SERVER_CRT}" >${MATCHBOX_CERT_FILE}
+  chmod 644 ${MATCHBOX_CERT_FILE}
+  echo "${SERVER_KEY}" >${MATCHBOX_KEY_FILE}
+  chmod 600 ${MATCHBOX_KEY_FILE}
+elif [[ ! -s "${MATCHBOX_CA_FILE}" || ! -s "${MATCHBOX_CERT_FILE}" || ! -s "${MATCHBOX_KEY_FILE}" ]]; then
   if [[ "$FQDN" != "null" ]]; then
     cd /scripts/tls
     export SAN="DNS.1:${FQDN}"
     ./cert-gen
-    cp ca.crt client.crt client.key server.crt server.key /etc/matchbox/
+    cp ca.crt "${MATCHBOX_CA_FILE}"
+    cp server.crt "${MATCHBOX_CERT_FILE}"
+    cp server.key "${MATCHBOX_KEY_FILE}"
+    mkdir -p $(dirname ${CLIENT_CERT_FILE})
+    cp client.crt "${CLIENT_CERT_FILE}"
+    mkdir -p $(dirname ${CLIENT_KEY_FILE})
+    cp client.key "${CLIENT_KEY_FILE}"
     bashio::log.green "ca.crt: \n $(<ca.crt)"
     bashio::log.green "client.crt: \n $(<client.crt)"
     bashio::log.green "client.key: \n $(<client.key)"
-    cd /etc/matchbox
   else
     bashio::log.fatal "Configuration invalid, either specify fqdn or a full set of certificates..."
     exit 1

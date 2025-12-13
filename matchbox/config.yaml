@@ -20,10 +20,13 @@ environment:
   MATCHBOX_RPC_ADDRESS: 0.0.0.0:8081
   MATCHBOX_DATA_PATH: /opt/matchbox/data
   MATCHBOX_ASSETS_PATH: /opt/matchbox/data/assets
+  MATCHBOX_CERT_FILE: /opt/matchbox/tls/server.crt
+  MATCHBOX_KEY_FILE: /opt/matchbox/tls/server.key
+  MATCHBOX_CA_FILE: /opt/matchbox/tls/ca.crt
+  CLIENT_CERT_FILE: /opt/matchbox/tls/client.crt
+  CLIENT_KEY_FILE: /opt/matchbox/tls/client.key
 schema:
   ca.crt: str?
-  client.crt: str?
-  client.key: str?
   server.crt: str?
   server.key: str?
   fqdn: str?
