@@ -1,3 +1,23 @@
+workflow:
+  rules:
+    # Run on scheduled pipelines
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+    # Run if triggered via the "Run pipeline" button in the GitLab UI
+    - if: $CI_PIPELINE_SOURCE == "web"
+    # Run on merge requests
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    # Prevent pipelines on default branch for release commits (changelog updates)
+    - if: $CI_COMMIT_MESSAGE =~ /^chore\(release\)/ && $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: never
+    # Run on tags
+    - if: $CI_COMMIT_TAG
+    # Run on default branch
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    # Allow forcing a run for example in child pipelines
+    - if: $FORCE_PIPELINE_RUN == "true"
+    # Do not run on other branches etc
+    - when: never
+
 build:
   image: docker:28
   services:
