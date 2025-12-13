@@ -9,14 +9,8 @@ arch:
   - amd64
 image: registry.gitlab.com/home-assistant-addons/home-assistant-matchbox
 map:
-  - type: data
-    path: /var/lib/matchbox
-    read_only: false
-  - type: media
-    path: /var/lib/matchbox/assets
-    read_only: false
   - type: addon_config
-    path: /matchbox
+    path: /opt/matchbox
     read_only: false
 ports:
   8080/tcp: 8000
@@ -24,8 +18,8 @@ ports:
 environment:
   MATCHBOX_ADDRESS: 0.0.0.0:8080
   MATCHBOX_RPC_ADDRESS: 0.0.0.0:8081
-  MATCHBOX_DATA_PATH: /matchbox/data
-  MATCHBOX_ASSETS_PATH: /matchbox/data/assets
+  MATCHBOX_DATA_PATH: /opt/matchbox/data
+  MATCHBOX_ASSETS_PATH: /opt/matchbox/data/assets
 schema:
   ca.crt: str?
   client.crt: str?
