@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.4.2](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.4.1...v1.4.2) (2025-12-13)
+
+### Bug Fixes
+
+* Add workflow configuration ([61864a2](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/commit/61864a271dd15cd03bb847e4235476189916e723))
+
 ## [1.4.1](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.4.0...v1.4.1) (2025-12-13)
 
 ### Bug Fixes
