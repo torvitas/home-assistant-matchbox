@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.5.0](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.4.3...v1.5.0) (2025-12-13)
+
+### Features
+
+* Improve cert bootstrapping and data persistence ([1e4ccd0](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/commit/1e4ccd04bea854cdd921fb93bbfa71c591dc9563))
+
 ## [1.4.3](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.4.2...v1.4.3) (2025-12-13)
 
 ### Bug Fixes
