@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.5.4](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.5.3...v1.5.4) (2025-12-13)
+
+### Bug Fixes
+
+* Update build configuration ([e5aff22](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/commit/e5aff22ed73934688cef81f2f44cf7b44fb77453))
+
 ## [1.5.3](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.5.2...v1.5.3) (2025-12-13)
 
 ### Bug Fixes
