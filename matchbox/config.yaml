@@ -19,10 +19,10 @@ map:
     path: /etc/matchbox
     read_only: false
 ports:
-  8080/tcp: 8080
+  8080/tcp: 8000
   8081/tcp: 8081
 environment:
-  MATCHBOX_ADDRESS: 0.0.0.0:8080
+  MATCHBOX_ADDRESS: 0.0.0.0:8000
   MATCHBOX_RPC_ADDRESS: 0.0.0.0:8081
   MATCHBOX_LOG_LEVEL: debug
 schema:
