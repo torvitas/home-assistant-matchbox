@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.4.0](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.3.13...v1.4.0) (2025-12-13)
+
+### Features
+
+* Move data folder, add arguments option ([1c58aad](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/commit/1c58aadcc0e5298c8a6e642c26e1071290b1b6c2))
+
 ## [1.3.13](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.3.12...v1.3.13) (2025-12-13)
 
 ### Bug Fixes
