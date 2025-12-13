@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.4.3](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.4.2...v1.4.3) (2025-12-13)
+
+### Bug Fixes
+
+* Change data path ([c53cf1d](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/commit/c53cf1dd7fd8bbc3604bfbcb7ae750487910d5e6))
+
 ## [1.4.2](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.4.1...v1.4.2) (2025-12-13)
 
 ### Bug Fixes
