@@ -16,15 +16,16 @@ map:
     path: /var/lib/matchbox/assets
     read_only: false
   - type: addon_config
-    path: /etc/matchbox
+    path: /matchbox
     read_only: false
 ports:
   8080/tcp: 8000
   8081/tcp: 8081
 environment:
-  MATCHBOX_ADDRESS: 0.0.0.0:8000
+  MATCHBOX_ADDRESS: 0.0.0.0:8080
   MATCHBOX_RPC_ADDRESS: 0.0.0.0:8081
-  MATCHBOX_LOG_LEVEL: debug
+  MATCHBOX_DATA_PATH: /matchbox/data
+  MATCHBOX_ASSETS_PATH: /matchbox/data/assets
 schema:
   ca.crt: str?
   client.crt: str?
@@ -32,3 +33,8 @@ schema:
   server.crt: str?
   server.key: str?
   fqdn: str?
+  arguments:
+    - str
+options:
+  arguments:
+    - -log-level debug
