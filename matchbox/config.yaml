@@ -9,9 +9,6 @@ arch:
   - amd64
 image: registry.gitlab.com/home-assistant-addons/home-assistant-matchbox
 map:
-  - type: data
-    path: /data
-    read_only: false
   - type: addon_config
     path: /opt/matchbox
     read_only: false
