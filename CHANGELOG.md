@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.13](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.3.12...v1.3.13) (2025-12-13)
+
+### Bug Fixes
+
+* Change default port to 8000 ([31bc192](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/commit/31bc192f07f0baf2a178f6c05cdf1f8ecec5c64b))
+* Update container base images ([e9c8781](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/commit/e9c8781a74fc392a905c77968801e9a239e60134))
+
 ## [1.3.12](https://gitlab.com/home-assistant-addons/home-assistant-matchbox/compare/v1.3.11...v1.3.12) (2025-08-02)
 
 ### Bug Fixes
