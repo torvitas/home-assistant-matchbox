@@ -1,5 +1,5 @@
 name: Matchbox
-version: v1.5.4
+version: v1.5.5
 slug: matchbox
 description: Matchbox is a service that matches bare-metal machines to profiles that PXE boot and provision clusters.
 url: https://gitlab.com/home-assistant-addons/home-assistant-matchbox
