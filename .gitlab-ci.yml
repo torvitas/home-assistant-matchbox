@@ -32,11 +32,7 @@ build:
   rules:
     # A project access token with api and write_repository permissions is required
     - if: $CI_COMMIT_BRANCH =~ /feat\/.*/
-      variables:
-        CONTAINER_TAG: $CI_COMMIT_REF_NAME
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-      variables:
-        CONTAINER_TAG: latest
     - when: never
 
 release:
